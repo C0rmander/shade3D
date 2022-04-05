@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Release" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/shade3D" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++1y" />
+					<Add option="-m32" />
+					<Add directory="C:/mingw_dev_lib/SDL2-2.0.14/i686-w64-mingw32/include/SDL2" />
+					<Add directory="C:/VulkanSDK/1.2.189.2/Include/vulkan" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-LC:\VulkanSDK\1.2.189.2\Lib" />
+					<Add directory="C:/mingw_dev_lib/SDL2-2.0.14/i686-w64-mingw32/lib" />
+					<Add directory="C:/VulkanSDK/1.2.189.2/Lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++1y" />
+			<Add option="-m64" />
+			<Add directory="C:/VulkanSDK/1.2.189.2/Include/vulkan" />
+			<Add directory="C:/mingw_dev_lib/SDL2-2.0.14/i686-w64-mingw32/include/SDL2" />
+			<Add directory="C:/mingw_dev_lib/SDL2_ttf-2.0.15/i686-w64-mingw32/include/SDL2" />
+			<Add directory="C:/mingw_dev_lib/SDL2_image-2.0.5/i686-w64-mingw32/include/SDL2" />
+		</Compiler>
+		<Linker>
+			<Add option="-m64" />
+			<Add option="-lmingw32 -lSDL2main -lSDL2 -LC:\VulkanSDK\1.2.189.2\Lib\" />
+			<Add directory="C:/VulkanSDK/1.2.189.2/Lib" />
+			<Add directory="C:/mingw_dev_lib/SDL2-2.0.14/i686-w64-mingw32/lib" />
+			<Add directory="C:/mingw_dev_lib/SDL2_ttf-2.0.15/i686-w64-mingw32/lib" />
+			<Add directory="C:/mingw_dev_lib/SDL2_image-2.0.5/i686-w64-mingw32/lib" />
+		</Linker>
+		<Unit filename="ListOfVulkanFunctions.inl" />
+		<Unit filename="VkBootstrap.cpp" />
+		<Unit filename="VkBootstrap.h" />
+		<Unit filename="VkBootstrapDispatch.h" />
+		<Unit filename="VulkanFunctions.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="vk_engine.cpp" />
+		<Unit filename="vk_engine.h" />
+		<Unit filename="vk_initializers.cpp" />
+		<Unit filename="vk_initializers.h" />
+		<Unit filename="vk_type.h" />
+		<Unit filename="volk.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="shade3D" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/shade3D" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-std=c++1y" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/shade3D" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++1y" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++1y" />
+			<Add directory="C:/mingw_dev_lib/SDL2-2.0.14/x86_64-w64-mingw32/include/SDL2" />
+			<Add directory="C:/mingw_dev_lib/SDL2_ttf-2.0.15/x86_64-w64-mingw32/include/SDL2" />
+			<Add directory="C:/mingw_dev_lib/SDL2_image-2.0.5/x86_64-w64-mingw32/include/SDL2" />
+			<Add directory="C:/VulkanSDK/1.3.204.0/Include" />
+		</Compiler>
+		<Linker>
+			<Add option="-lmingw32 -lSDL2main -lSDL2 -lvulkan-1" />
+			<Add directory="C:/mingw_dev_lib/SDL2-2.0.14/x86_64-w64-mingw32/lib" />
+			<Add directory="C:/mingw_dev_lib/SDL2_ttf-2.0.15/x86_64-w64-mingw32/lib" />
+			<Add directory="C:/mingw_dev_lib/SDL2_image-2.0.5/x86_64-w64-mingw32/lib" />
+			<Add directory="C:/VulkanSDK/1.3.204.0/Lib" />
+		</Linker>
+		<Unit filename="ListOfVulkanFunctions.inl" />
+		<Unit filename="Matrix3D.h" />
+		<Unit filename="Matrix4D.h" />
+		<Unit filename="Obj_Loader.cpp" />
+		<Unit filename="Obj_Loader.h" />
+		<Unit filename="Transform.cpp" />
+		<Unit filename="Transform.h" />
+		<Unit filename="Vector3D.h" />
+		<Unit filename="Vector4D.h" />
+		<Unit filename="VkBootstrap.cpp" />
+		<Unit filename="VkBootstrap.h" />
+		<Unit filename="VkBootstrapDispatch.h" />
+		<Unit filename="VulkanFunctions.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="tri_mesh.vert" />
+		<Unit filename="triangle.frag" />
+		<Unit filename="triangle.vert" />
+		<Unit filename="vk_engine.cpp" />
+		<Unit filename="vk_engine.h" />
+		<Unit filename="vk_initializers.cpp" />
+		<Unit filename="vk_initializers.h" />
+		<Unit filename="vk_mem_alloc.h" />
+		<Unit filename="vk_mesh.cpp" />
+		<Unit filename="vk_mesh.h" />
+		<Unit filename="vk_type.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

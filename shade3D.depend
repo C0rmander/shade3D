@@ -1,0 +1,1215 @@
+# depslib dependency file v1.0
+1646099513 source:e:\codeblockscode\shade3d\main.cpp
+	"vk_engine.h"
+	<SDL_vulkan.h>
+
+1634342270 e:\codeblockscode\shade3d\vulkantest.h
+	"vulkan/vulkan.h"
+
+1634341944 source:e:\codeblockscode\shade3d\vulkanfunctions.cpp
+	"VulkanFunctions.h"
+	"vulkan/vulkan.h"
+	"ListOfVulkanFunctions.inl"
+
+1634342129 e:\codeblockscode\shade3d\vulkanfunctions.h
+	"vulkan/vulkan.h"
+	"ListOfVulkanFunctions.inl"
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan.h
+	"vk_platform.h"
+	"vulkan_core.h"
+	"vulkan_android.h"
+	<zircon/types.h>
+	"vulkan_fuchsia.h"
+	"vulkan_ios.h"
+	"vulkan_macos.h"
+	"vulkan_metal.h"
+	"vulkan_vi.h"
+	<wayland-client.h>
+	"vulkan_wayland.h"
+	<windows.h>
+	"vulkan_win32.h"
+	<xcb/xcb.h>
+	"vulkan_xcb.h"
+	<X11/Xlib.h>
+	"vulkan_xlib.h"
+	<directfb.h>
+	"vulkan_directfb.h"
+	<X11/Xlib.h>
+	<X11/extensions/Xrandr.h>
+	"vulkan_xlib_xrandr.h"
+	<ggp_c/vulkan_types.h>
+	"vulkan_ggp.h"
+	<screen/screen.h>
+	"vulkan_screen.h"
+	"vulkan_beta.h"
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vk_platform.h
+	<stddef.h>
+	<stdint.h>
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_core.h
+	"vk_platform.h"
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_android.h
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_fuchsia.h
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_ios.h
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_macos.h
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_metal.h
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_vi.h
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_wayland.h
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_win32.h
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_xcb.h
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_xlib.h
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_directfb.h
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_xlib_xrandr.h
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_ggp.h
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_screen.h
+
+1631667840 e:\codeblockscode\shade3d\vulkan\vulkan_beta.h
+	"vk_video/vulkan_video_codec_h264std.h"
+	"vk_video/vulkan_video_codec_h264std_encode.h"
+	"vk_video/vulkan_video_codec_h264std_decode.h"
+	"vk_video/vulkan_video_codec_h265std.h"
+	"vk_video/vulkan_video_codec_h265std_decode.h"
+
+1634342568 e:\codeblockscode\shade3d\listofvulkanfunctions.inl
+
+1634337670 source:e:\codeblockscode\shade3d\vulkantest.cpp
+	"vulkanTest.h"
+	"vulkanFunctions.h"
+	"vulkan/vulkan.h"
+	<iostream>
+	<windef.h>
+	<Windows.h>
+	"ListOfVulkanFunctions.inl"
+
+1649117895 e:\codeblockscode\shade3d\vk_engine.h
+	"vk_type.h"
+	<vector>
+	<deque>
+	<functional>
+	"vk_mem_alloc.h"
+	"vk_mesh.h"
+	"Vector4D.h"
+	"Matrix4D.h"
+
+1648644983 e:\codeblockscode\shade3d\vk_type.h
+	<vulkan/vulkan.h>
+	"vk_mem_alloc.h"
+
+1649178816 source:e:\codeblockscode\shade3d\vk_engine.cpp
+	"vk_type.h"
+	"vk_engine.h"
+	<SDL.h>
+	<SDL_vulkan.h>
+	"vk_initializers.h"
+	<cmath>
+	"vk_type.h"
+	<windows.h>
+	<iostream>
+	<fstream>
+	"VkBootstrap.h"
+	"vk_mem_alloc.h"
+	"transform.h"
+	"Matrix4D.h"
+	"Vector3D.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_metal.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"SDL_locale.h"
+	"SDL_misc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+	<sdkddkver.h>
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\begin_code.h
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\close_code.h
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<sys/cpuinline.h>
+	<mbarrier.h>
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<arm64intr.h>
+	<arm64_neon.h>
+	<mm3dnow.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_sensor.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_metal.h
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_shape.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_locale.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_misc.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl_vulkan.h
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1647297240 e:\codeblockscode\shade3d\vk_initializers.h
+	"vk_type.h"
+
+1649075016 source:e:\codeblockscode\shade3d\vk_initializers.cpp
+	"vk_initializers.h"
+
+1646095769 e:\codeblockscode\shade3d\vkbootstrap.h
+	<cassert>
+	<cstdio>
+	<cstring>
+	<vector>
+	<system_error>
+	<vulkan/vulkan.h>
+	"VkBootstrapDispatch.h"
+
+1646095781 e:\codeblockscode\shade3d\vkbootstrapdispatch.h
+	<vulkan/vulkan.h>
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan.h
+	"vk_platform.h"
+	"vulkan_core.h"
+	"vulkan_android.h"
+	<zircon/types.h>
+	"vulkan_fuchsia.h"
+	"vulkan_ios.h"
+	"vulkan_macos.h"
+	"vulkan_metal.h"
+	"vulkan_vi.h"
+	<wayland-client.h>
+	"vulkan_wayland.h"
+	<windows.h>
+	"vulkan_win32.h"
+	<xcb/xcb.h>
+	"vulkan_xcb.h"
+	<X11/Xlib.h>
+	"vulkan_xlib.h"
+	<directfb.h>
+	"vulkan_directfb.h"
+	<X11/Xlib.h>
+	<X11/extensions/Xrandr.h>
+	"vulkan_xlib_xrandr.h"
+	<ggp_c/vulkan_types.h>
+	"vulkan_ggp.h"
+	<screen/screen.h>
+	"vulkan_screen.h"
+	"vulkan_beta.h"
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vk_platform.h
+	<stddef.h>
+	<stdint.h>
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_core.h
+	"vk_platform.h"
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_android.h
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_fuchsia.h
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_ios.h
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_macos.h
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_metal.h
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_vi.h
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_wayland.h
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_win32.h
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_xcb.h
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_xlib.h
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_directfb.h
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_xlib_xrandr.h
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_ggp.h
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_screen.h
+
+1631667840 e:\codeblockscode\shade3d\\vulkan\vulkan_beta.h
+	"vk_video/vulkan_video_codec_h264std.h"
+	"vk_video/vulkan_video_codec_h264std_encode.h"
+	"vk_video/vulkan_video_codec_h264std_decode.h"
+	"vk_video/vulkan_video_codec_h265std.h"
+	"vk_video/vulkan_video_codec_h265std_decode.h"
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan.h
+	"vk_platform.h"
+	"vulkan_core.h"
+	"vulkan_android.h"
+	<zircon/types.h>
+	"vulkan_fuchsia.h"
+	"vulkan_ios.h"
+	"vulkan_macos.h"
+	"vulkan_metal.h"
+	"vulkan_vi.h"
+	<wayland-client.h>
+	"vulkan_wayland.h"
+	<windows.h>
+	"vulkan_win32.h"
+	<xcb/xcb.h>
+	"vulkan_xcb.h"
+	<X11/Xlib.h>
+	"vulkan_xlib.h"
+	<directfb.h>
+	"vulkan_directfb.h"
+	<X11/Xlib.h>
+	<X11/extensions/Xrandr.h>
+	"vulkan_xlib_xrandr.h"
+	<ggp_c/vulkan_types.h>
+	"vulkan_ggp.h"
+	<screen/screen.h>
+	"vulkan_screen.h"
+	"vulkan_beta.h"
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vk_platform.h
+	<stddef.h>
+	<stdint.h>
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_core.h
+	"vk_platform.h"
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_android.h
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_fuchsia.h
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_ios.h
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_macos.h
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_metal.h
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_vi.h
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_wayland.h
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_win32.h
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_xcb.h
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_xlib.h
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_directfb.h
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_xlib_xrandr.h
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_ggp.h
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_screen.h
+
+1631667840 c:\vulkansdk\1.2.189.2\include\vulkan\vulkan_beta.h
+	"vk_video/vulkan_video_codec_h264std.h"
+	"vk_video/vulkan_video_codec_h264std_encode.h"
+	"vk_video/vulkan_video_codec_h264std_decode.h"
+	"vk_video/vulkan_video_codec_h265std.h"
+	"vk_video/vulkan_video_codec_h265std_decode.h"
+
+1646066066 source:e:\codeblockscode\shade3d\vkbootstrap.cpp
+	"VkBootstrap.h"
+	<cstring>
+	<fcntl.h>
+	<windows.h>
+	<dlfcn.h>
+	<mutex>
+
+1646070257 e:\codeblockscode\shade3d\volk.h
+	<vulkan/vk_platform.h>
+	<vulkan/vulkan_core.h>
+	<vulkan/vulkan_win32.h>
+	<vulkan/vulkan_beta.h>
+	<vulkan/vulkan.h>
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan.h
+	"vk_platform.h"
+	"vulkan_core.h"
+	"vulkan_android.h"
+	<zircon/types.h>
+	"vulkan_fuchsia.h"
+	"vulkan_ios.h"
+	"vulkan_macos.h"
+	"vulkan_metal.h"
+	"vulkan_vi.h"
+	<wayland-client.h>
+	"vulkan_wayland.h"
+	<windows.h>
+	"vulkan_win32.h"
+	<xcb/xcb.h>
+	"vulkan_xcb.h"
+	<X11/Xlib.h>
+	"vulkan_xlib.h"
+	<directfb.h>
+	"vulkan_directfb.h"
+	<X11/Xlib.h>
+	<X11/extensions/Xrandr.h>
+	"vulkan_xlib_xrandr.h"
+	<ggp_c/vulkan_types.h>
+	"vulkan_ggp.h"
+	<screen/screen.h>
+	"vulkan_screen.h"
+	"vulkan_beta.h"
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vk_platform.h
+	<stddef.h>
+	<stdint.h>
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_core.h
+	"vk_platform.h"
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_android.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_fuchsia.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_ios.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_macos.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_metal.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_vi.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_wayland.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_win32.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_xcb.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_xlib.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_directfb.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_xlib_xrandr.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_ggp.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_screen.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vulkan\vulkan_beta.h
+	"vk_video/vulkan_video_codec_h264std.h"
+	"vk_video/vulkan_video_codec_h264std_encode.h"
+	"vk_video/vulkan_video_codec_h265std.h"
+	"vk_video/vulkan_video_codec_h265std_encode.h"
+	"vk_video/vulkan_video_codec_h264std_decode.h"
+	"vk_video/vulkan_video_codec_h265std_decode.h"
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vk_video\vulkan_video_codec_h264std.h
+	<stdint.h>
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vk_video\vulkan_video_codec_h264std_encode.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vk_video\vulkan_video_codec_h265std.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vk_video\vulkan_video_codec_h265std_encode.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vk_video\vulkan_video_codec_h264std_decode.h
+
+1644877680 c:\vulkansdk\1.3.204.0\include\vk_video\vulkan_video_codec_h265std_decode.h
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_vulkan.h
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+	<sdkddkver.h>
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\begin_code.h
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\close_code.h
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_metal.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"SDL_locale.h"
+	"SDL_misc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<sys/cpuinline.h>
+	<mbarrier.h>
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<arm64intr.h>
+	<arm64_neon.h>
+	<mm3dnow.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576489 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1608576488 c:\mingw_dev_lib\sdl2-2.0.14\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1648481784 e:\codeblockscode\shade3d\vk_mem_alloc.h
+	<vulkan/vulkan.h>
+	<cstdint>
+	<cstdlib>
+	<cstring>
+	<utility>
+	<type_traits>
+	<intrin.h>
+	"my_custom_assert.h"
+	"my_custom_min.h"
+	<algorithm>
+	<mutex>
+	"vk_mem_alloc.h"
+	<cassert>
+	<algorithm>
+	<mutex>
+	<cstdlib>
+	<cstdlib>
+	<AvailabilityMacros.h>
+	<shared_mutex>
+	<atomic>
+	<atomic>
+	"vk_mem_alloc.h"
+	"vk_mem_alloc.h"
+	"vk_mem_alloc.h"
+	"vk_mem_alloc.h"
+
+1649152987 source:e:\codeblockscode\shade3d\vk_mesh.cpp
+	"vk_mesh.h"
+	<iostream>
+	"Obj_Loader.h"
+
+1649107354 e:\codeblockscode\shade3d\vk_mesh.h
+	"vk_type.h"
+	<vector>
+	"Vector3D.h"
+
+1648561596 e:\codeblockscode\shade3d\vector3d.h
+	<cmath>
+	<vector>
+	<ostream>
+
+1642641422 e:\codeblockscode\shade3d\vector4d.h
+	<cmath>
+	<vector>
+	<ostream>
+	"Vector3D.h"
+
+1649168780 e:\codeblockscode\shade3d\matrix4d.h
+	"Vector4D.h"
+
+1649121249 source:e:\codeblockscode\shade3d\obj_loader.cpp
+	"Obj_Loader.h"
+	<fstream>
+	<sstream>
+	<iostream>
+	<string>
+	<vector>
+	<map>
+
+1649120981 e:\codeblockscode\shade3d\obj_loader.h
+	"Vector3D.h"
+	"Face3D.h"
+	<vector>
+	<map>
+
+1628964697 e:\codeblockscode\shade3d\face3d.h
+	"Vector3D.h"
+
+1649178210 source:e:\codeblockscode\shade3d\transform.cpp
+	"Transform.h"
+	<math.h>
+
+1649091307 e:\codeblockscode\shade3d\transform.h
+	"Matrix4D.h"
+	"Vector3D.h"
+
