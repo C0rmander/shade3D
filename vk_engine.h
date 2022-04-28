@@ -9,6 +9,7 @@
 #include "vk_mesh.h"
 #include "Vector4D.h"
 #include "Matrix4D.h"
+#include <unordered_map>
 struct DeletionQueue
 {
     std::deque<std::function<void()>> deletors;
@@ -36,6 +37,50 @@ struct MeshPushConstants
     Matrix4D mat;
 };
 
+struct Material
+{
+    VkPipeline pipeline;
+    VkPipelineLayout pipelineLayout;
+};
+
+struct RenderObject
+{
+    Mesh* mesh;
+    Material* material;
+    Matrix4D transformMatrix;
+};
+
+struct FrameData
+{
+    VkSemaphore _presentSemaphore, _renderSemaphore;
+    VkFence _renderFence;
+
+    VkCommandPool _commandPool; // the command pool for the commands
+    VkCommandBuffer _mainCommandBuffer; // the buffer the commands will be recorded into
+
+    AllocatedBuffer cameraBuffer;
+    VkDescriptorSet globalDescriptor;
+};
+
+struct CameraData
+{
+    Matrix4D view;
+    Matrix4D projection;
+    Matrix4D viewproj;
+};
+
+
+struct GPUSceneData
+{
+    Vector4D fogColour;
+    Vector4D fogDistances;
+    Vector4D ambientColour;
+    Vector4D sunlightDirection;
+    Vector4D sunlightColour;
+};
+
+constexpr unsigned int FRAME_OVERLAP = 2;
+
 class vk_engine
 {
     public:
@@ -62,15 +107,15 @@ class vk_engine
     VkQueue _graphicsQueue; // this is the queue our commands will be submitted to
     uint32_t _graphicsQueueFamily; // this is the family of queue we are working with, it defines the types of commands that can be put into that queue
 
-    VkCommandPool _commandPool; // the command pool for the commands
-    VkCommandBuffer _mainCommandBuffer; // the buffer the commands will be recorded into
+
 
     VkRenderPass _renderpass;
 
     std::vector<VkFramebuffer> _framebuffers;
 
-    VkSemaphore _presentSemaphore, _renderSemaphore;
-    VkFence _renderFence;
+    FrameData _frames[FRAME_OVERLAP];
+
+    FrameData& get_current_frame();
 
     VkPipelineLayout _trianglePipelineLayout;
     VkPipeline _trianglePipeline;
@@ -81,6 +126,41 @@ class vk_engine
     VkPipeline _meshPipeline;
     Mesh _triangleMesh;
     Mesh _testMesh;
+
+    VkImageView _depthImageView;
+    AllocatedImage _depthImage;
+
+    //depth image must have a format
+    VkFormat _depthFormat;
+
+    Vector3D camMan{0,0,0};
+    float deltaX;
+    float deltaY;
+
+    VkDescriptorSetLayout _globalSetLayout;
+    VkDescriptorPool _descriptorPool;
+
+    VkPhysicalDeviceProperties _gpuProperties;
+    GPUSceneData _sceneParameters;
+    AllocatedBuffer _sceneParameterBuffer;
+
+    std::vector<RenderObject> _renderables;
+
+    std::unordered_map<std::string,Material> _materials;
+    std::unordered_map<std::string,Mesh> _meshes;
+
+    Material* create_material(VkPipeline pipeline, VkPipelineLayout layout, const std::string& name);
+    Material* get_material(const std::string& name);
+
+    Mesh* get_mesh(const std::string& name);
+
+    size_t pad_uniform_buffer_size(size_t originalSize);
+
+    void draw_objects(VkCommandBuffer cmdBuf, RenderObject* first, int count);
+
+    AllocatedBuffer create_buffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage memoryUsage);
+
+
     void init_vulkan();
     // used to initialize everything
     void init();
@@ -94,6 +174,8 @@ class vk_engine
     //starts the main loop
     void run();
 
+
+
     bool load_shader_module(const char* filePath, VkShaderModule* outShaderModule);
 
     private:
@@ -103,6 +185,8 @@ class vk_engine
         void init_framebuffers();
         void init_sync_structures();
         void init_pipelines();
+        void init_scene();
+        void init_descriptors();
         void load_meshes();
         void upload_mesh(Mesh& mesh);
 };
@@ -121,6 +205,8 @@ public:
     VkPipelineLayout _pipelineLayout;
 
     VkPipeline build_pipeline(VkDevice device, VkRenderPass pass);
+
+    VkPipelineDepthStencilStateCreateInfo _depthStencil;
 };
 
 #endif // VK_ENGINE_H

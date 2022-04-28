@@ -58,6 +58,7 @@
 		<Unit filename="VkBootstrap.h" />
 		<Unit filename="VkBootstrapDispatch.h" />
 		<Unit filename="VulkanFunctions.h" />
+		<Unit filename="default_lit.frag" />
 		<Unit filename="main.cpp" />
 		<Unit filename="tri_mesh.vert" />
 		<Unit filename="triangle.frag" />

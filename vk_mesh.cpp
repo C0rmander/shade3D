@@ -50,21 +50,19 @@ bool Mesh::load_from_obj(const char* filename)
     std::vector <Face3D> normalFaces = loadOBJ.normalsFaces();
     std::vector <Vector3D> normals = loadOBJ.normals();
     std::cout<<"the vertices size is:  "<<vertices.size()<<std::endl;
-    std::cout<<"the normals size is:  "<<normals.size()<<std::endl;
-    std::cout<<"the faces size *3 is:  "<<faces.size()*3<<std::endl;
+    std::cout<<"the normalFaces size is:  "<<normalFaces.size()<<std::endl;
+    std::cout<<"the faces size is:  "<<faces.size()<<std::endl;
     for(int i = 0; i < faces.size(); i++)
     {
+         Vector3D vec1, vec2, vec3;
+        vec1 = vertices[faces[i].f1-1];
+        vec2 = vertices[faces[i].f2-1];
+        vec3 = vertices[faces[i].f3-1];
 
-        Vector3D vec1 = vertices[faces[i].f1-1];
-        Vector3D vec2 = vertices[faces[i].f2-1];
-        Vector3D vec3 = vertices[faces[i].f3-1];
-       // std::cout<<i<<","<<vertices.size()<<std::endl;
 
         Vector3D norm1 = normals[normalFaces[i].f1-1];
-        //std::cout<<faces[i].f1-1<<std::endl;
         Vector3D norm2 = normals[normalFaces[i].f2-1];
         Vector3D norm3 = normals[normalFaces[i].f3-1];
-       // std::cout<<i<<","<<normals.size()<<std::endl;
         Vertex ObjMesh;
 
         ObjMesh.position.x = vec1.x;

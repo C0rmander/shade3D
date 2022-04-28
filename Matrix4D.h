@@ -24,12 +24,20 @@ public:
                     matrix[2][0] = n02; matrix[2][1] = n12; matrix[2][2] = n22; matrix[2][3] = n32;
                     matrix[3][0] = n03; matrix[3][1] = n13; matrix[3][2] = n23; matrix[3][3] = n33;
                  }
+
         Matrix4D(float f)
                  {
                     matrix[0][0] = f; matrix[0][1] = f; matrix[0][2] = f; matrix[0][3] = f;
                     matrix[1][0] = f; matrix[1][1] = f; matrix[1][2] = f; matrix[1][3] = f;
                     matrix[2][0] = f; matrix[2][1] = f; matrix[2][2] = f; matrix[2][3] = f;
                     matrix[3][0] = f; matrix[3][1] = f; matrix[3][2] = f; matrix[3][3] = f;
+                 }
+        Matrix4D(Vector4D X, Vector4D Y, Vector4D Z, Vector4D W)
+                 {
+                    matrix[0][0] = X.x; matrix[0][1] = Y.x; matrix[0][2] = Z.x; matrix[0][3] = W.x;
+                    matrix[1][0] = X.y; matrix[1][1] = Y.y; matrix[1][2] = Z.y; matrix[1][3] = W.y;
+                    matrix[2][0] = X.z; matrix[2][1] = Y.z; matrix[2][2] = Z.z; matrix[2][3] = W.z;
+                    matrix[3][0] = X.w; matrix[3][1] = Y.w; matrix[3][2] = Z.w; matrix[3][3] = W.w;
                  }
 //        Matrix3D(float n00, float n01, float n10, float n11)
 //                 {
@@ -105,12 +113,42 @@ inline Matrix4D operator + (const Matrix4D M1, Matrix4D M2)
                     M1(0,2) + M2(0,2) , M1(1,2)+ M2(1,2) ,M1(2,2)+ M2(2,2),M1(3,2)+ M2(3,2),
                     M1(0,3) + M2(0,3) , M1(1,3)+ M2(1,3) ,M1(2,3)+ M2(2,3),M1(3,3)+ M2(3,3));
 }
-inline Matrix4D operator * (const Matrix4D M1, Matrix4D M2)
+//inline Matrix4D operator * (const Matrix4D m1.matrix, Matrix4D M2)
+//{
+//    return Matrix4D(m1.matrix(0,0) * m2.matrix(0,0) , m1.matrix(1,0)* m2.matrix(1,0) ,m1.matrix(2,0)* m2.matrix(2,0),m1.matrix(3,0)* m2.matrix(3,0),
+//                    m1.matrix(0,1) * m2.matrix(0,1) , m1.matrix(1,1)* m2.matrix(1,1) ,m1.matrix(2,1)* m2.matrix(2,1),m1.matrix(3,1)* m2.matrix(3,1),
+//                    m1.matrix(0,2) * m2.matrix(0,2) , m1.matrix(1,2)* m2.matrix(1,2) ,m1.matrix(2,2)* m2.matrix(2,2),m1.matrix(3,2)* m2.matrix(3,2),
+//                    m1.matrix(0,3) * m2.matrix(0,3) , m1.matrix(1,3)* m2.matrix(1,3) ,m1.matrix(2,3)* m2.matrix(2,3),m1.matrix(3,3)* m2.matrix(3,3));
+//}
+
+inline Matrix4D operator * (const Matrix4D m1, Matrix4D m2)
 {
-    return Matrix4D(M1(0,0) * M2(0,0) , M1(1,0)* M2(1,0) ,M1(2,0)* M2(2,0),M1(3,0)* M2(3,0),
-                    M1(0,1) * M2(0,1) , M1(1,1)* M2(1,1) ,M1(2,1)* M2(2,1),M1(3,1)* M2(3,1),
-                    M1(0,2) * M2(0,2) , M1(1,2)* M2(1,2) ,M1(2,2)* M2(2,2),M1(3,2)* M2(3,2),
-                    M1(0,3) * M2(0,3) , M1(1,3)* M2(1,3) ,M1(2,3)* M2(2,3),M1(3,3)* M2(3,3));
+    Vector4D X(
+        m1.matrix[0][0] * m2.matrix[0][0] + m1.matrix[1][0] * m2.matrix[0][1] + m1.matrix[2][0] * m2.matrix[0][2] + m1.matrix[3][0] * m2.matrix[0][3],
+        m1.matrix[0][1] * m2.matrix[0][0] + m1.matrix[1][1] * m2.matrix[0][1] + m1.matrix[2][1] * m2.matrix[0][2] + m1.matrix[3][1] * m2.matrix[0][3],
+        m1.matrix[0][2] * m2.matrix[0][0] + m1.matrix[1][2] * m2.matrix[0][1] + m1.matrix[2][2] * m2.matrix[0][2] + m1.matrix[3][2] * m2.matrix[0][3],
+        m1.matrix[0][3] * m2.matrix[0][0] + m1.matrix[1][3] * m2.matrix[0][1] + m1.matrix[2][3] * m2.matrix[0][2] + m1.matrix[3][3] * m2.matrix[0][3]
+    );
+    Vector4D Y(
+        m1.matrix[0][0] * m2.matrix[1][0] + m1.matrix[1][0] * m2.matrix[1][1] + m1.matrix[2][0] * m2.matrix[1][2] + m1.matrix[3][0] * m2.matrix[1][3],
+        m1.matrix[0][1] * m2.matrix[1][0] + m1.matrix[1][1] * m2.matrix[1][1] + m1.matrix[2][1] * m2.matrix[1][2] + m1.matrix[3][1] * m2.matrix[1][3],
+        m1.matrix[0][2] * m2.matrix[1][0] + m1.matrix[1][2] * m2.matrix[1][1] + m1.matrix[2][2] * m2.matrix[1][2] + m1.matrix[3][2] * m2.matrix[1][3],
+        m1.matrix[0][3] * m2.matrix[1][0] + m1.matrix[1][3] * m2.matrix[1][1] + m1.matrix[2][3] * m2.matrix[1][2] + m1.matrix[3][3] * m2.matrix[1][3]
+    );
+    Vector4D Z(
+        m1.matrix[0][0] * m2.matrix[2][0] + m1.matrix[1][0] * m2.matrix[2][1] + m1.matrix[2][0] * m2.matrix[2][2] + m1.matrix[3][0] * m2.matrix[2][3],
+        m1.matrix[0][1] * m2.matrix[2][0] + m1.matrix[1][1] * m2.matrix[2][1] + m1.matrix[2][1] * m2.matrix[2][2] + m1.matrix[3][1] * m2.matrix[2][3],
+        m1.matrix[0][2] * m2.matrix[2][0] + m1.matrix[1][2] * m2.matrix[2][1] + m1.matrix[2][2] * m2.matrix[2][2] + m1.matrix[3][2] * m2.matrix[2][3],
+        m1.matrix[0][3] * m2.matrix[2][0] + m1.matrix[1][3] * m2.matrix[2][1] + m1.matrix[2][3] * m2.matrix[2][2] + m1.matrix[3][3] * m2.matrix[2][3]
+    );
+    Vector4D W(
+        m1.matrix[0][0] * m2.matrix[3][0] + m1.matrix[1][0] * m2.matrix[3][1] + m1.matrix[2][0] * m2.matrix[3][2] + m1.matrix[3][0] * m2.matrix[3][3],
+        m1.matrix[0][1] * m2.matrix[3][0] + m1.matrix[1][1] * m2.matrix[3][1] + m1.matrix[2][1] * m2.matrix[3][2] + m1.matrix[3][1] * m2.matrix[3][3],
+        m1.matrix[0][2] * m2.matrix[3][0] + m1.matrix[1][2] * m2.matrix[3][1] + m1.matrix[2][2] * m2.matrix[3][2] + m1.matrix[3][2] * m2.matrix[3][3],
+        m1.matrix[0][3] * m2.matrix[3][0] + m1.matrix[1][3] * m2.matrix[3][1] + m1.matrix[2][3] * m2.matrix[3][2] + m1.matrix[3][3] * m2.matrix[3][3]
+    );
+
+    return Matrix4D( X, Y, Z, W );
 }
 //Matrix4D operator *(const Matrix4D& A, const Matrix4D& B)
 //{
@@ -129,17 +167,17 @@ inline Matrix4D operator * (const Matrix4D M1, Matrix4D M2)
 //                      A(2,0) * B(0,3) + A(2,1) * B(1,3) + A(2,2) * B(2,3) + A(2,3)));
 //}));
 
-inline std::ostream& operator << (std::ostream& o, Matrix4D mat)
-        {
-            for (auto &i : mat.matrix)
-            {
-                for (auto &j : i)
-                {
-                    o << j << " ";
-                }
-                o << std::endl;
-            }
-        }
+//inline std::ostream& operator << (std::ostream& o, Matrix4D mat)
+//        {
+//            for (auto &i : mat.matrix)
+//            {
+//                for (auto &j : i)
+//                {
+//                    o << j << " ";
+//                }
+//                o << std::endl;
+//            }
+//        }
 
 #endif // MATRIX3D_H
 

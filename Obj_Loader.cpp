@@ -63,6 +63,7 @@ void Obj_Loader::loadFile(const char* OBJfile)
             continue;
         }
     }
+    infile.close();
     //texloader.setTexCoords(tex2d);
     //texloader.setTexFaces(texFaces);
     //return vec3d;
