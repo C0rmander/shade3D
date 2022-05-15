@@ -499,7 +499,7 @@ void vk_engine::init_descriptors()
 void vk_engine::init_pipelines()
 {
     VkShaderModule triangleFragShader;
-    if(!load_shader_module("default_lit.frag.spv", &triangleFragShader))
+    if(!load_shader_module("cook-torrence.frag.spv", &triangleFragShader))
     {
         std::cout<<"Error building triangle fragment shader" << std::endl;
     }
@@ -761,7 +761,7 @@ void vk_engine::draw_objects(VkCommandBuffer cmdBuf, RenderObject* first, int co
 
     _sceneParameters.ambientColour = {sin(framed),0,cos(framed),1};
 
-    _sceneParameters.sunlightDirection = {Vector4D(0.f,0.f,-2.f, 0.f)};
+    _sceneParameters.sunlightDirection = {Vector4D(0.f,-1.f,-2.f, 0.f)};
 
     char* sceneData;
     vmaMapMemory(_allocator, _sceneParameterBuffer._allocation, (void**)&sceneData);
