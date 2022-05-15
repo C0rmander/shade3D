@@ -647,7 +647,7 @@ void vk_engine::load_meshes()
 //    _triangleMesh._vertices[1].colour = {0.f, 1.f, 0.0f};
 //    _triangleMesh._vertices[2].colour = {0.f, 1.f, 0.0f};
 
-    const char* objFile = "E:/codeblockscode/shade3D/Sponza-master/sponza.obj";
+    const char* objFile = "E:/codeblockscode/shade3D/D20.obj";
     _testMesh.load_from_obj(objFile);
 
     //upload_mesh(_triangleMesh);
@@ -747,7 +747,7 @@ void vk_engine::draw_objects(VkCommandBuffer cmdBuf, RenderObject* first, int co
     CameraData camData;
     camData.projection = projection;
     camData.view = view;
-    camData.viewproj = projection * view;
+    camData.model = model;
 
 
     void* data;
@@ -760,6 +760,8 @@ void vk_engine::draw_objects(VkCommandBuffer cmdBuf, RenderObject* first, int co
     float framed = (_frameNumber/120.f);
 
     _sceneParameters.ambientColour = {sin(framed),0,cos(framed),1};
+
+    _sceneParameters.sunlightDirection = {Vector4D(0.f,0.f,-2.f, 0.f)};
 
     char* sceneData;
     vmaMapMemory(_allocator, _sceneParameterBuffer._allocation, (void**)&sceneData);

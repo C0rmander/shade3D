@@ -12,7 +12,7 @@ layout( set = 0, binding = 0 ) uniform CameraBuffer
 {
     mat4 view;
     mat4 projection;
-    mat4 viewproj;
+    mat4 model;
 } CameraData;
 
 layout( push_constant ) uniform constants
@@ -21,14 +21,16 @@ layout( push_constant ) uniform constants
     mat4 mat;
 } PushConstants;
 
-
-
+layout (location = 1) out vec3 fn;
+layout (location = 2) out vec3 vertPos;
 
 void main()
 {
-    mat4 transformMatrix = CameraData.projection * PushConstants.mat;
-   // mat4 transformMatrix = PushConstants.mat * CameraData.view;
-   // transformMatrix = CameraData.projection * transformMatrix;
-    gl_Position = transformMatrix * vec4(vPosition, 1.0f);
+  mat4 normalMat = transpose(inverse(PushConstants.mat));
+  fn = vec3(normalMat * vec4(vNormal, 0.0));
+  vec4 vertPos4 = PushConstants.mat * vec4(vPosition, 1.0);
+  vertPos = vec3(vertPos4) / vertPos4.w;
+  mat4 transformMatrix = CameraData.projection * PushConstants.mat;
+  gl_Position = transformMatrix * vec4(vPosition, 1.0f);
     outColour = vColour;
 }

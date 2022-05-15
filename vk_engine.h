@@ -66,7 +66,7 @@ struct CameraData
 {
     Matrix4D view;
     Matrix4D projection;
-    Matrix4D viewproj;
+    Matrix4D model;
 };
 
 
