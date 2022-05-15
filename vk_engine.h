@@ -31,6 +31,12 @@ struct DeletionQueue
     }
 };
 
+struct  Texture
+{
+    AllocatedImage image;
+    VkImageView imageView;
+};
+
 struct MeshPushConstants
 {
     Vector4D data;
@@ -59,6 +65,8 @@ struct FrameData
     VkCommandBuffer _mainCommandBuffer; // the buffer the commands will be recorded into
 
     AllocatedBuffer cameraBuffer;
+    AllocatedBuffer objectBuffer;
+    VkDescriptorSet objectDescriptor;
     VkDescriptorSet globalDescriptor;
 };
 
@@ -69,6 +77,11 @@ struct CameraData
     Matrix4D viewproj;
 };
 
+struct ObjectData
+{
+    Matrix4D modelMatrix;
+};
+
 
 struct GPUSceneData
 {
@@ -77,6 +90,13 @@ struct GPUSceneData
     Vector4D ambientColour;
     Vector4D sunlightDirection;
     Vector4D sunlightColour;
+};
+
+struct UploadContext
+{
+    VkFence _uploadFence;
+    VkCommandPool _commandPool;
+    VkCommandBuffer _commandBuffer;
 };
 
 constexpr unsigned int FRAME_OVERLAP = 2;
@@ -126,6 +146,7 @@ class vk_engine
     VkPipeline _meshPipeline;
     Mesh _triangleMesh;
     Mesh _testMesh;
+    std::vector<std::string> mesh_names;
 
     VkImageView _depthImageView;
     AllocatedImage _depthImage;
@@ -138,6 +159,7 @@ class vk_engine
     float deltaY;
 
     VkDescriptorSetLayout _globalSetLayout;
+    VkDescriptorSetLayout _objectSetLayout;
     VkDescriptorPool _descriptorPool;
 
     VkPhysicalDeviceProperties _gpuProperties;
@@ -148,11 +170,16 @@ class vk_engine
 
     std::unordered_map<std::string,Material> _materials;
     std::unordered_map<std::string,Mesh> _meshes;
+    std::unordered_map<std::string, Texture> _loadTextures;
 
     Material* create_material(VkPipeline pipeline, VkPipelineLayout layout, const std::string& name);
     Material* get_material(const std::string& name);
 
     Mesh* get_mesh(const std::string& name);
+
+    UploadContext _uploadContext;
+
+    void immediate_submit(std::function<void(VkCommandBuffer cmdBuf)>&& function);
 
     size_t pad_uniform_buffer_size(size_t originalSize);
 
@@ -187,6 +214,7 @@ class vk_engine
         void init_pipelines();
         void init_scene();
         void init_descriptors();
+        void load_images();
         void load_meshes();
         void upload_mesh(Mesh& mesh);
 };

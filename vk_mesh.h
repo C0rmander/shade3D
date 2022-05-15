@@ -16,6 +16,7 @@ struct Vertex
     Vector3D position;
     Vector3D normal;
     Vector3D colour;
+    Vector3D uv;
 
     static VertexInputDescription get_vertex_description();
 };
@@ -23,10 +24,18 @@ struct Vertex
 struct Mesh
 {
     std::vector<Vertex> _vertices;
-
+    std::string name;
     AllocatedBuffer _vertexBuffer;
+};
 
-    bool load_from_obj(const char* filename);
+class vk_mesh
+{
+
+
+    public:
+        vk_mesh();
+        std::vector<Mesh> load_from_obj(const char* filename);
+
 };
 
 

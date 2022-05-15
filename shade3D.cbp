@@ -39,17 +39,22 @@
 			<Add directory="C:/VulkanSDK/1.3.204.0/Include" />
 		</Compiler>
 		<Linker>
-			<Add option="-lmingw32 -lSDL2main -lSDL2 -lvulkan-1" />
+			<Add option="-lvulkan-1 -lmingw32 -lSDL2main -lSDL2 -lSDL2_image" />
 			<Add directory="C:/mingw_dev_lib/SDL2-2.0.14/x86_64-w64-mingw32/lib" />
 			<Add directory="C:/mingw_dev_lib/SDL2_ttf-2.0.15/x86_64-w64-mingw32/lib" />
 			<Add directory="C:/mingw_dev_lib/SDL2_image-2.0.5/x86_64-w64-mingw32/lib" />
 			<Add directory="C:/VulkanSDK/1.3.204.0/Lib" />
 		</Linker>
 		<Unit filename="ListOfVulkanFunctions.inl" />
+		<Unit filename="MTL.h" />
+		<Unit filename="MTL_Loader.cpp" />
+		<Unit filename="MTL_Loader.h" />
 		<Unit filename="Matrix3D.h" />
 		<Unit filename="Matrix4D.h" />
 		<Unit filename="Obj_Loader.cpp" />
 		<Unit filename="Obj_Loader.h" />
+		<Unit filename="Tex_Loader.cpp" />
+		<Unit filename="Tex_Loader.h" />
 		<Unit filename="Transform.cpp" />
 		<Unit filename="Transform.h" />
 		<Unit filename="Vector3D.h" />

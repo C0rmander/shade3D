@@ -37,18 +37,17 @@ void Obj_Loader::loadFile(const char* OBJfile)
 {
     string data;
     //Tex_Loader texloader;
-    vector<Face3D> texFaces;
-
-
+    vector<std::string> temp_mtl;
     //vector<Texture2D> tex2d;
     ifstream infile;
-    int f = 0;
+    int offset = 0;
     infile.open(OBJfile);
     while(getline(infile, data))
     {
         if(data.substr(0,2) == "v "){vec3d.push_back(Vector3D(splitf(data.erase(0,2),' ')));continue;}
         //if(data.substr(0,2) == "vt"){tex2d.push_back(splitf(data.erase(0,3),' '));continue;}
         if(data.substr(0,2) == "vn"){norm3d.push_back(splitf(data.erase(0,3),' '));continue;}
+        if(data.substr(0,2) == "vt"){uv3d.push_back(splitf(data.erase(0,3),' '));continue;}
 //        if(data.substr(0,7) == "usemtl ")
 //        {
 //                materialNames.insert({f,data.erase(0,7)});
@@ -56,10 +55,23 @@ void Obj_Loader::loadFile(const char* OBJfile)
 //        }
         if(data.substr(0,2) == "f ")
         {
-            f+=1;
+            offset+=1;
             face3d.push_back(getFace(data.erase(0,2),0));
             texFaces.push_back(getFace(data.erase(0,2),1));
             normFaces.push_back(getFace(data.erase(0,2),2));
+            continue;
+        }
+        if(data.substr(0,2) == "o ")
+        {
+            for (std::string i: temp_mtl)
+                std::cout<<i<<std::endl;
+            temp_mtl.clear();
+            objects.push_back(OBJobject{data.erase(0,2), offset});
+            continue;
+        }
+        if(data.substr(0,7) == "usemtl ")
+        {
+            temp_mtl.push_back(data.erase(0,7));
             continue;
         }
     }
@@ -72,4 +84,6 @@ vector<Vector3D> Obj_Loader::verts(){return vec3d;}
 vector<Vector3D> Obj_Loader::normals(){return norm3d;}
 vector<Face3D> Obj_Loader::normalsFaces(){return normFaces;}
 vector<Face3D> Obj_Loader::faces(){return face3d;}
+vector<Vector3D> Obj_Loader::uvs(){return uv3d;}
+vector<OBJobject> Obj_Loader::shapes(){return objects;}
 //map<int,string> Obj_Loader::getMaterialNames(){return materialNames;}
