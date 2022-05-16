@@ -23,7 +23,7 @@ const vec4 diffuseColor = vec4(1.0, 1.0, 1.0, 1.0);
 const vec4 specularColor = vec4(255, 255, 255, 1.0);
 const float roughnessValue = 10.0;
 const vec4 lightColor = vec4(255, 255, 255, 1.0);
-const float irradiPerp = 2.0;
+const float irradiPerp = 20.0;
 const float F0 = 0.8;
 const float k = 0.7;
 

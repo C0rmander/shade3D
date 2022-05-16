@@ -8,6 +8,7 @@
 #include <windows.h>
 #include <iostream>
 #include <fstream>
+#include <SDL_ttf.h>
 // bootstrap library created by Charles-lunarg
 //https://github.com/charles-lunarg/vk-bootstrap
 #include "VkBootstrap.h"
@@ -16,6 +17,9 @@
 #include "transform.h"
 #include "Matrix4D.h"
 #include "Vector3D.h"
+#include "LTimer.h"
+#include <sstream>
+
 using namespace std;
 #define VK_CHECK(x)                                                 \
     do                                                              \
@@ -94,6 +98,7 @@ void vk_engine::init_vulkan()
     .build();
 
     vkb::Instance vkb_inst = inst_ret.value();
+
 
     //Store instance to destroy on program end
     _instance = vkb_inst.instance;
@@ -499,7 +504,7 @@ void vk_engine::init_descriptors()
 void vk_engine::init_pipelines()
 {
     VkShaderModule triangleFragShader;
-    if(!load_shader_module("cook-torrence.frag.spv", &triangleFragShader))
+    if(!load_shader_module("default_lit.frag.spv", &triangleFragShader))
     {
         std::cout<<"Error building triangle fragment shader" << std::endl;
     }
@@ -647,7 +652,7 @@ void vk_engine::load_meshes()
 //    _triangleMesh._vertices[1].colour = {0.f, 1.f, 0.0f};
 //    _triangleMesh._vertices[2].colour = {0.f, 1.f, 0.0f};
 
-    const char* objFile = "E:/codeblockscode/shade3D/D20.obj";
+    const char* objFile = "E:/codeblockscode/shade3D/sponza.obj";
     _testMesh.load_from_obj(objFile);
 
     //upload_mesh(_triangleMesh);
@@ -849,7 +854,7 @@ void vk_engine::draw()
     // make clear colour from frame numver. Will flash with 120*pi frame period
     VkClearValue clearValue;
     float flash = abs(sin(_frameNumber/120.f));
-    clearValue.color = {{0.0f, 0.0f, flash, 1.0f}};
+    clearValue.color = {{0.0f, 0.0f, 0, 1.0f}};
 
     VkClearValue depthClear;
     depthClear.depthStencil.depth = 1.f;
@@ -967,8 +972,13 @@ void vk_engine::run()
     const Uint8* keystate = SDL_GetKeyboardState(NULL);
     SDL_CaptureMouse(SDL_TRUE);
     SDL_SetRelativeMouseMode(SDL_TRUE);
+    Uint32 totalFrameTicks = 0;
+	Uint32 totalFrames = 0;
     while(!exit)
     {
+        totalFrames++;
+        Uint64 start = SDL_GetTicks();
+
         //handle events in the queue
         while(SDL_PollEvent(&e) != 0)
         {
@@ -1006,6 +1016,13 @@ void vk_engine::run()
             }
 
         draw();
+        Uint64 end = SDL_GetTicks();
+        totalFrameTicks += end - start;
+
+        float elapsed = 1000.0f / ((float)totalFrameTicks / totalFrames);
+        char fps[10] = ""; // 4294967296 is the maximum for Uint32, so 10 characters it is
+        sprintf(fps, "%f", elapsed);
+        SDL_SetWindowTitle(_window, fps);
     }
 }
 

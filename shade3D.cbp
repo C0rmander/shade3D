@@ -39,12 +39,14 @@
 			<Add directory="C:/VulkanSDK/1.3.204.0/Include" />
 		</Compiler>
 		<Linker>
-			<Add option="-lmingw32 -lSDL2main -lSDL2 -lvulkan-1" />
+			<Add option="-lmingw32 -lSDL2_ttf -lSDL2main -lSDL2 -lvulkan-1" />
 			<Add directory="C:/mingw_dev_lib/SDL2-2.0.14/x86_64-w64-mingw32/lib" />
 			<Add directory="C:/mingw_dev_lib/SDL2_ttf-2.0.15/x86_64-w64-mingw32/lib" />
 			<Add directory="C:/mingw_dev_lib/SDL2_image-2.0.5/x86_64-w64-mingw32/lib" />
 			<Add directory="C:/VulkanSDK/1.3.204.0/Lib" />
 		</Linker>
+		<Unit filename="LTimer.cpp" />
+		<Unit filename="LTimer.h" />
 		<Unit filename="ListOfVulkanFunctions.inl" />
 		<Unit filename="Matrix3D.h" />
 		<Unit filename="Matrix4D.h" />
@@ -58,6 +60,7 @@
 		<Unit filename="VkBootstrap.h" />
 		<Unit filename="VkBootstrapDispatch.h" />
 		<Unit filename="VulkanFunctions.h" />
+		<Unit filename="cook-torrence.frag" />
 		<Unit filename="default_lit.frag" />
 		<Unit filename="main.cpp" />
 		<Unit filename="tri_mesh.vert" />

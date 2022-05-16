@@ -112,7 +112,7 @@
 	<vulkan/vulkan.h>
 	"vk_mem_alloc.h"
 
-1652632835 source:e:\codeblockscode\shade3d\vk_engine.cpp
+1652712460 source:e:\codeblockscode\shade3d\vk_engine.cpp
 	"vk_type.h"
 	"vk_engine.h"
 	<SDL.h>
@@ -123,11 +123,14 @@
 	<windows.h>
 	<iostream>
 	<fstream>
+	<SDL_ttf.h>
 	"VkBootstrap.h"
 	"vk_mem_alloc.h"
 	"transform.h"
 	"Matrix4D.h"
 	"Vector3D.h"
+	"LTimer.h"
+	<sstream>
 
 1608572791 c:\mingw_dev_lib\sdl2-2.0.14\i686-w64-mingw32\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -1213,4 +1216,16 @@
 1651679514 e:\codeblockscode\shade3d\transform.h
 	"Matrix4D.h"
 	"Vector3D.h"
+
+1547325890 c:\mingw_dev_lib\sdl2_ttf-2.0.15\x86_64-w64-mingw32\include\sdl2\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1652697658 source:e:\codeblockscode\shade3d\ltimer.cpp
+	"LTimer.h"
+
+1652698204 e:\codeblockscode\shade3d\ltimer.h
+	<cstdint>
+	<SDL.h>
 
